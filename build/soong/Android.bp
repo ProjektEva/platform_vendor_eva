@@ -1,0 +1,7 @@
+bootstrap_go_package {
+    name: "soong-eva",
+    pkgPath: "eva/soong/android",
+    srcs: [
+        "android/variable.go",
+    ],
+}
