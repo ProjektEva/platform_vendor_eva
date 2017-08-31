@@ -53,6 +53,10 @@ PRODUCT_COPY_FILES += \
     vendor/eva/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
     vendor/eva/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
+# Fix Dialer
+PRODUCT_COPY_FILES +=  \
+    vendor/eva/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml 
+
 # eva-specific startup services
 PRODUCT_COPY_FILES += \
     vendor/eva/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
