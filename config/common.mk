@@ -118,6 +118,11 @@ PRODUCT_PACKAGES += \
 #ifeq ($(DEFAULT_ROOT_METHOD),rootless)
 #endif
 
+# Charging sounds
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/media/audio/BatteryPlugged.ogg:system/media/audio/ui/BatteryPlugged.ogg \
+    vendor/aosp/prebuilt/common/media/audio/BatteryPlugged_48k.ogg:system/media/audio/ui/BatteryPlugged_48k.ogg
+
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
     libffmpeg_extractor \
