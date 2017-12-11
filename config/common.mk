@@ -151,5 +151,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.modversion=$(EVA_MOD_VERSION) \
     ro.eva.buildtype=$(EVA_BUILD_TYPE)
 
-EXTENDED_POST_PROCESS_PROPS := vendor/eva/tools/eva_process_props.py
+# Google sounds
+include vendor/eva/google/GoogleAudio.mk
 
+EXTENDED_POST_PROCESS_PROPS := vendor/eva/tools/gzosp_process_props.py
