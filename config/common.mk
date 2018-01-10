@@ -70,6 +70,10 @@ PRODUCT_COPY_FILES += \
     vendor/eva/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/eva/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+# BootAnim
+PRODUCT_COPY_FILES += \
+    vendor/eva/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+
 # Required packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
