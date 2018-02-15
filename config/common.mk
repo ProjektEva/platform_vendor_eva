@@ -158,4 +158,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Google sounds
 include vendor/eva/google/GoogleAudio.mk
 
-EXTENDED_POST_PROCESS_PROPS := vendor/eva/tools/gzosp_process_props.py
+EXTENDED_POST_PROCESS_PROPS := vendor/eva/tools/eva_process_props.py
