@@ -54,8 +54,8 @@ PRODUCT_COPY_FILES += \
     vendor/eva/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
 # Fix Dialer
-PRODUCT_COPY_FILES +=  \
-    vendor/eva/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml 
+#PRODUCT_COPY_FILES +=  \
+#    vendor/eva/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
 # eva-specific startup services
 PRODUCT_COPY_FILES += \
