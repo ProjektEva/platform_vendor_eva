@@ -137,6 +137,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/eva/overlay/common
 
+# SDClang
+
+ifneq ($(HOST_OS),linux)
+ifneq ($(sdclang_already_warned),true)
+$(warning **********************************************)
+$(warning * SDCLANG is not supported on non-linux hosts.)
+$(warning **********************************************)
+sdclang_already_warned := true
+endif
+else
+include vendor/eva/sdclang/sdclang.mk
+endif
+
 # Versioning System
 # eva first version.
 PRODUCT_VERSION_MAJOR = 9
