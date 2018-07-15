@@ -24,6 +24,13 @@ PRODUCT_COPY_FILES += \
     vendor/eva/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/eva/prebuilt/common/bin/50-eva.sh:system/addon.d/50-eva.sh
 
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/eva/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/eva/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/eva/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
+
 # Backup services whitelist
 PRODUCT_COPY_FILES += \
     vendor/eva/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
