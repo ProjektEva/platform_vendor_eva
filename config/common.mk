@@ -139,7 +139,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/eva/overlay/common
 
 # Versioning System
 # eva first version.
-PRODUCT_VERSION_MAJOR = 1.0
+PRODUCT_VERSION_MAJOR = 9
 PRODUCT_VERSION_MINOR = ALPHA
 PRODUCT_VERSION_MAINTENANCE = 1.0
 EVA_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
