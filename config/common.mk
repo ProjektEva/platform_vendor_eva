@@ -76,6 +76,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/eva/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
+# Power whitelist
+PRODUCT_COPY_FILES += \
+    vendor/gzosp/config/permissions/gzosp-power-whitelist.xml:system/etc/sysconfig/gzosp-power-whitelist.xml
+
 # Required packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
