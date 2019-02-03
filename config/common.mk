@@ -117,6 +117,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
     media.sf.extractor-plugin=libffmpeg_extractor.so
 
+# Charger Image
+PRODUCT_PACKAGES += \
+    charger_res_images
+
 # Storage manager
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.storage_manager.enabled=true
