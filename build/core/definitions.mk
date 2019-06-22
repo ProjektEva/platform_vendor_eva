@@ -6,4 +6,7 @@ $(if $1,$(firstword $1) $(call uniq,$(filter-out $(firstword $1),$1)))
 endef
 
 # Include QCOM macros
-include vendor/eva/build/core/qcom_utils.mk
+include vendor/eva/build/core/utils.mk
+
+# Include vendor platform definitions
+include vendor/eva/build/core/vendor/*.mk
