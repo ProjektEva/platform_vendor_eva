@@ -57,11 +57,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-# Don't export PS1 in /system/etc/mkshrc.
-PRODUCT_COPY_FILES += \
-    vendor/eva/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
-    vendor/eva/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
-
 # Fix Dialer
 #PRODUCT_COPY_FILES +=  \
 #    vendor/eva/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
