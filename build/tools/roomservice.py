@@ -45,7 +45,7 @@ DEBUG = False
 default_manifest = ".repo/manifest.xml"
 
 custom_local_manifest = ".repo/local_manifests/eva.xml"
-custom_default_revision = "oreo-mr1"
+custom_default_revision = "androidX"
 custom_dependencies = "eva.dependencies"
 org_manifest = "eva-devices"  # leave empty if org is provided in manifest
 org_display = "Eva-Devices"  # needed for displaying
