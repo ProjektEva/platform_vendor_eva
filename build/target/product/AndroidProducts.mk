@@ -18,3 +18,8 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/eva_arm.mk \
     $(LOCAL_DIR)/eva_arm64.mk \
     $(LOCAL_DIR)/eva_x86.mk
+
+COMMON_LUNCH_CHOICES := \
+    eva_arm-userdebug \
+    eva_arm64-userdebug \
+    eva_x86-userdebug
