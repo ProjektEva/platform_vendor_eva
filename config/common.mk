@@ -67,6 +67,9 @@ PRODUCT_COPY_FILES += \
     vendor/eva/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/eva/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+PRODUCT_COPY_FILES += \
+    vendor/eva/prebuilt/common/etc/permissions/privapp-permissions-google.xml:system/etc/permissions/privapp-permissions-google.xml
+
 # BootAnim
 PRODUCT_COPY_FILES += \
     vendor/eva/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
