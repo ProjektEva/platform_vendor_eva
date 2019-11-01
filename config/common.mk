@@ -22,11 +22,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.disable_rescue=true \
     ro.setupwizard.rotation_locked=true
 
-# Default notification/alarm sounds
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.config.notification_sound=Popcorn.ogg \
-    ro.config.alarm_alert=Bright_morning.ogg
-
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
@@ -39,10 +34,6 @@ else
 # Enable ADB authentication
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
-
-# Ambient Play
-#PRODUCT_PACKAGES += \
-#    AmbientPlayHistoryProvider
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -151,9 +142,6 @@ include vendor/eva/config/branding.mk
 
 # OTA
 include vendor/eva/config/ota.mk
-
-# GApps
-include vendor/gapps/config.mk
 
 # Pixel Style
 include vendor/pixelstyle/config.mk
