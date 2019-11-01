@@ -6,12 +6,12 @@ import (
 	"android/soong/android"
 )
 
-func customExpandVariables(ctx android.ModuleContext, in string) string {
-	customVars := ctx.Config().VendorConfig("customVarsPlugin")
+func evaExpandVariables(ctx android.ModuleContext, in string) string {
+	evaVars := ctx.Config().VendorConfig("evaVarsPlugin")
 
 	out, err := android.Expand(in, func(name string) (string, error) {
-		if customVars.IsSet(name) {
-			return customVars.String(name), nil
+		if evaVars.IsSet(name) {
+			return evaVars.String(name), nil
 		}
 		// This variable is not for us, restore what the original
 		// variable string will have looked like for an Expand

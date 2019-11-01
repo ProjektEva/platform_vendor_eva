@@ -1,15 +1,15 @@
-ifeq ($(CUSTOM_BUILD_TYPE), OFFICIAL)
+ifeq ($(EVA_BUILD_TYPE), OFFICIAL)
 
-CUSTOM_OTA_VERSION_CODE := ten
+EVA_OTA_VERSION_CODE := androidX
 
-CUSTOM_PROPERTIES += \
-    org.pixelexperience.ota.version_code=$(CUSTOM_OTA_VERSION_CODE) \
+EVA_PROPERTIES += \
+    ro.eva.ota.version_code=$(EVA_OTA_VERSION_CODE) \
     sys.ota.disable_uncrypt=1
 
 PRODUCT_PACKAGES += \
     Updates
 
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/org.pixelexperience.ota.xml:system/etc/permissions/org.pixelexperience.ota.xml
+    vendor/eva/config/permissions/org.projekteva.ota.xml:system/etc/permissions/org.projekteva.ota.xml
 
 endif

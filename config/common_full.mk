@@ -1,4 +1,4 @@
-# Inherit common PixelExperience stuff
-$(call inherit-product, vendor/aosp/config/common.mk)
+# Inherit common Eva stuff
+$(call inherit-product, vendor/eva/config/common.mk)
 
 PRODUCT_SIZE := full

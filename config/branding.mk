@@ -1,26 +1,26 @@
 # Set all versions
-CUSTOM_BUILD_TYPE ?= UNOFFICIAL
+EVA_BUILD_TYPE ?= UNOFFICIAL
 
-CUSTOM_DATE_YEAR := $(shell date -u +%Y)
-CUSTOM_DATE_MONTH := $(shell date -u +%m)
-CUSTOM_DATE_DAY := $(shell date -u +%d)
-CUSTOM_DATE_HOUR := $(shell date -u +%H)
-CUSTOM_DATE_MINUTE := $(shell date -u +%M)
-CUSTOM_BUILD_DATE_UTC := $(shell date -d '$(CUSTOM_DATE_YEAR)-$(CUSTOM_DATE_MONTH)-$(CUSTOM_DATE_DAY) $(CUSTOM_DATE_HOUR):$(CUSTOM_DATE_MINUTE) UTC' +%s)
-CUSTOM_BUILD_DATE := $(CUSTOM_DATE_YEAR)$(CUSTOM_DATE_MONTH)$(CUSTOM_DATE_DAY)-$(CUSTOM_DATE_HOUR)$(CUSTOM_DATE_MINUTE)
+EVA_DATE_YEAR := $(shell date -u +%Y)
+EVA_DATE_MONTH := $(shell date -u +%m)
+EVA_DATE_DAY := $(shell date -u +%d)
+EVA_DATE_HOUR := $(shell date -u +%H)
+EVA_DATE_MINUTE := $(shell date -u +%M)
+EVA_BUILD_DATE_UTC := $(shell date -d '$(EVA_DATE_YEAR)-$(EVA_DATE_MONTH)-$(EVA_DATE_DAY) $(EVA_DATE_HOUR):$(EVA_DATE_MINUTE) UTC' +%s)
+EVA_BUILD_DATE := $(EVA_DATE_YEAR)$(EVA_DATE_MONTH)$(EVA_DATE_DAY)-$(EVA_DATE_HOUR)$(EVA_DATE_MINUTE)
 
-CUSTOM_PLATFORM_VERSION := 10.0
+EVA_PLATFORM_VERSION := androidX
 
-TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
+TARGET_PRODUCT_SHORT := $(subst eva_,,$(EVA_BUILD))
 
-CUSTOM_VERSION := PixelExperience_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-BETA-$(CUSTOM_BUILD_TYPE)
-CUSTOM_VERSION_PROP := 10
-ROM_FINGERPRINT := PixelExperience/$(CUSTOM_PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(CUSTOM_BUILD_DATE)
+EVA_VERSION := ProjektEva_$(EVA_BUILD)-$(EVA_PLATFORM_VERSION)-$(EVA_BUILD_DATE)-$(EVA_BUILD_TYPE)
+EVA_VERSION_PROP := androidX
+ROM_FINGERPRINT := ProjektEva/$(EVA_PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(EVA_BUILD_DATE)
 
-CUSTOM_PROPERTIES := \
-    org.pixelexperience.version=$(CUSTOM_VERSION_PROP) \
-    org.pixelexperience.version.display=$(CUSTOM_VERSION) \
-    org.pixelexperience.build_date=$(CUSTOM_BUILD_DATE) \
-    org.pixelexperience.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
-    org.pixelexperience.build_type=$(CUSTOM_BUILD_TYPE) \
-    org.pixelexperience.fingerprint=$(ROM_FINGERPRINT)
+EVA_PROPERTIES := \
+    ro.eva.version=$(EVA_VERSION_PROP) \
+    ro.eva.version.display=$(EVA_VERSION) \
+    ro.eva.build_date=$(EVA_BUILD_DATE) \
+    ro.eva.build_date_utc=$(EVA_BUILD_DATE_UTC) \
+    ro.eva.build_type=$(EVA_BUILD_TYPE) \
+    ro.eva.fingerprint=$(ROM_FINGERPRINT)

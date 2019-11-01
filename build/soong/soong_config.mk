@@ -1,11 +1,11 @@
 FROM_SOONG := true
 
-include vendor/aosp/config/BoardConfigQcom.mk
+include vendor/eva/config/BoardConfigQcom.mk
 
 add_json_str_omitempty = $(if $(strip $(2)),$(call add_json_str, $(1), $(2)))
 add_json_val_default = $(call add_json_val, $(1), $(if $(strip $(2)), $(2), $(3)))
 
-_json_contents := $(_json_contents)    "Aosp":{$(newline)
+_json_contents := $(_json_contents)    "Eva":{$(newline)
 
 # See build/core/soong_config.mk for the add_json_* functions you can use here.
 $(call add_json_str_omitempty, Additional_gralloc_10_usage_bits, $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS))
